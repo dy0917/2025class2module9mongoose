@@ -2,8 +2,7 @@
 const Mongoose = require("mongoose");
 // if the connection fails, try 127.0.0.1 instead of localhost below
 const uri =
-  process.env.DB_URI ||
-  "mongodb://dbadmin:Password1@localhost:27017/newDB?authSource=admin";
+  process.env.DB_URI;
 
 // Connect to MongoDB
 Mongoose.connect(uri)
